@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+$main-color-login: #2675bb;
 .content {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
-    background: #2675bb;
+    background: $main-color-login;
 }
 
 .img-login {
@@ -13,14 +14,15 @@
 }
 
 .title-login {
-    color: #2675bb;
+    color: $main-color-login;
     margin: 0.5em 0 1.5em 0;
     font-family: 'Nunito', sans-serif;
 }
 
 .card-login {
-    height: 450px;
+    height: 480px;
     border-radius: 10px;
+    min-width: 320px;
 }
 
 .login {
@@ -32,6 +34,15 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: stretch;
+}
+
+.input-login {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    >mat-icon {
+        color: $main-color-login
+    }
 }
 
 .ancho-input {
@@ -50,4 +61,17 @@
 
 .spinner {
     margin: 0 auto;
+}
+
+p.foot-login {
+    margin-top: 1.5em;
+    color: #26a3de;
+    font-weight: 500;
+}
+
+@media (max-width: 480px) {
+    .card-login {
+        height: 100%;
+        width: 100%;
+    }
 }
