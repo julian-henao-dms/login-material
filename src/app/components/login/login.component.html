@@ -1,0 +1,21 @@
+<div class="content">
+    <mat-card class="card-login">
+        <div class="login">
+
+            <form (ngSubmit)="ingresar(data)">
+                <img class="img-login" src="./assets/images/logo-advance.png" alt="Usuario">
+                <h1 class="title-login">Bienvenido a Advance</h1>
+                <mat-form-field class="ancho-input">
+                    <mat-label>Usuario</mat-label>
+                    <input type="text" matInput required [(ngModel)]="data.usuario" name="usuario" id="usuario">
+                </mat-form-field>
+                <mat-form-field class="ancho-input passwd-field">
+                    <mat-label>Contraseña</mat-label>
+                    <input type="password" matInput required [(ngModel)]="data.password" name="password" id="password">
+                </mat-form-field>
+                <br>
+                <button type="submit" class="ancho-input button-dms" mat-raised-button>Ingresar</button>
+            </form>
+        </div>
+    </mat-card>
+</div>
